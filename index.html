@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ludo</title>
+  <style>
+    *{
+      border:0.5px solid black;
+      margin:0px;
+      padding: 0px;
+      background-color: white;
+    }
+    .main{
+      display:grid;
+      height:100vw;
+      width:100vw;
+    }
+    .container{
+      align-items: center;
+      justify-content: center;
+      position:absolute;
+      }
+    #container1{
+      display:flex;
+      flex-wrap:wrap;
+      height:36.5vw;
+      width:36.5vw;
+      background-color:red;
+    }
+    #container2{
+      left:63vw;
+      height:36.5vw;
+      width:37vw;
+      background-color:blue;
+      display:flex;
+      flex-wrap:wrap;
+    }
+    #container3{
+      top: 63vw;
+      height:37vw;
+      width:36.5vw;
+      background-color:green;
+      display:flex;
+      flex-wrap:wrap;
+    }
+    #container4{
+      top:63vw;
+      left:63vw;
+      height:37vw;
+      width:37vw;
+      background-color:yellow;
+      display:flex;
+      flex-wrap:wrap;
+    }
+    #container5{
+      top: 37vw; 
+      left: 37vw;
+      background-color:greenyellow;
+      height:26vw;
+      width:26vw;
+      display:flex;
+    }
+    #container6{
+      top: 37vw;
+      height:26vw;
+      width: 36.5vw;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns:repeat(6 ,1fr)
+    }
+    #container7{
+      left: 37vw;
+      height: 36.5vw;
+      width:26vw;
+      display:grid;
+      grid-template-rows: repeat(6,1fr);
+      grid-template-columns:repeat(3, 1fr)
+    }
+    #container8{
+      top: 37vw;
+      height:26vw;
+      width: 37vw;
+      left:63vw;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns:repeat(6, 1fr)
+    }
+    #container9{
+      left: 37vw;
+      height: 37vw;
+      width:26vw;
+      top:63vw;
+      display:grid;
+      grid-template-rows: repeat(6,1fr);
+      grid-template-columns:repeat(3, 1fr)
+    }
+    .box{
+      margin:1vw 3vw;
+      border-radius: 8vw;
+      height:8vw;
+      width:8vw;
+      box-shadow: 0vw 0vw 1vw black;
+    }
+    .item{
+      height: 8.4vw;
+      margin: 0px;
+      grid-gap: 0px;
+    }
+    .item1{
+      width:8.4vw;
+      height:5.8vw;
+    }
+    .item2{
+      background-color: red;
+    }
+    .item3{
+      background-color: blue;
+    }
+    .item4{
+      background-color: yellow;
+    }
+    .item5{
+      background-color: green;
+    }
+    .box2{
+      height:18.384776310850vw; 
+      width:18.384776310850vw;
+      position: absolute;
+    }
+    #box01{
+      background-color: red;
+      transform: rotate(45deg);
+      right:16.7vw;
+    }
+    #box02{
+      background-color: blue;
+      transform: rotate(45deg);
+      bottom:16.7vw;
+    }
+    #box03{
+      background-color: yellow;
+      transform: rotate(45deg);
+      left:16.7vw;
+    }
+    #box04{
+      background-color: green;
+      transform: rotate(45deg);
+      top:16.7vw;
+    }
+    .box-head{
+      height:28.6vw;
+      width:28.6vw;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      border-radius:5vw;
+      box-shadow:0vw 0vw 2vw black;
+    }
+    #box11,#box12,#box13,#box14{
+      background-color: red;  
+    }
+    #box21,#box22,#box23,#box24{
+      background-color: blue;
+    }
+    #box31,#box32,#box33,#box34{
+      background-color: green;
+    }
+    #box41,#box42,#box43,#box44{
+      background-color:yellow;
+    }
+    .ent{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+  <div class="container" id="container1">
+    <div class="box-head">
+      <div class="box" id="box11"></div>
+      <div class="box" id="box12"></div>
+      <div class="box" id="box13"></div>
+      <div class="box" id="box14"></div>
+    </div>
+  </div>
+  <div class="container" id="container2">
+    <div class="box-head">
+      <div class="box" id="box21"></div>
+      <div class="box" id="box22"></div>
+      <div class="box" id="box23"></div>
+      <div class="box" id="box24"></div>
+    </div>
+  </div>
+  <div class="container" id="container3">
+    <div class="box-head">
+      <div class="box" id="box31"></div>
+      <div class="box" id="box32"></div>
+      <div class="box" id="box33"></div>
+      <div class="box" id="box34"></div>
+    </div>
+  </div>
+  <div class="container" id="container4">
+    <div class="box-head">
+      <div class="box" id="box41"></div>
+      <div class="box" id="box42"></div>
+      <div class="box" id="box43"></div>
+      <div class="box" id="box44"></div>
+    </div>
+  </div>
+  <div class="container" id="container5">
+    <div class="box2" id="box01"></div>
+    <div class="box2" id="box02"></div>
+    <div class="box2" id="box03"></div>
+    <div class="box2" id="box04"></div></div>
+  <div class="container" id="container6">
+    <div class="item"></div>
+    <div class="item item2"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item ent">&rarr;</div>
+    <div class="item item2"></div>
+    <div class="item item2"></div>
+    <div class="item item2"></div>
+    <div class="item item2"></div>
+    <div class="item item2"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item ent">&star;</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+  <div class="container" id="container7">
+    <div class="item1"></div>
+    <div class="item1 ent">&darr;</div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item3"></div>
+    <div class="item1 item3"></div>
+    <div class="item1 ent">&star;</div>
+    <div class="item1 item3"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item3"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item3"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item3"></div>
+    <div class="item1"></div>
+  </div>
+  <div class="container" id="container8">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item ent">&star;</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item item4"></div>
+    <div class="item item4"></div>
+    <div class="item item4"></div>
+    <div class="item item4"></div>
+    <div class="item item4"></div>
+    <div class="item ent">&larr;</div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item item4"></div>
+    <div class="item"></div>
+  </div>
+  <div class="container" id="container9">
+    <div class="item1"></div>
+    <div class="item1 item5"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item5"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item5"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 item5"></div>
+    <div class="item1 ent">&star;</div>
+    <div class="item1 item5"></div>
+    <div class="item1 item5"></div>
+    <div class="item1"></div>
+    <div class="item1"></div>
+    <div class="item1 ent">&uarr;</div>
+    <div class="item1"></div>
+  </div>
+  </div>
+</body>
+</html>
